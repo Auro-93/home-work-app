@@ -64,13 +64,13 @@
 ## About The Project
 
 This is a React app that fetches remote job offers from the [Remotive API](https://github.com/remotive-io/remote-jobs-api) public API.
-User can explore five main routes:
+User can explore 6 main routes:
 
 <ul>
 <li>the <strong>Home</strong>, which contains a description and summary of the website; </li>
 
 <li>the <strong>Search Jobs</strong> section which allows users to search remote job offers, depending on the search form queries (search term and job category). This section is paginated; </li>
-
+<li>the <strong>Job Details</strong> section which contains more info (such as the description and external links) about a specific job offer; </li>
 <li>the <strong>Skills</strong> section, which allows users to save their skills in the local storage. Job categories that match user skills are marked with the icon ✅. This makes it easier to find jobs that match your profile;</li>
 
 <li><strong>Your List</strong> section, which allows users to save their favourite job offers in the local storage;</li>
@@ -145,3 +145,5 @@ Portfolio: [aurodev-web-developer-portfolio](https://aurodev-web-developer-portf
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
 - [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax)
+- [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax)
+- [dompurify](https://www.npmjs.com/package/dompurify)

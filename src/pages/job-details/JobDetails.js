@@ -28,6 +28,7 @@ const JobDetails = () => {
     /*SET JOB DATA AND ISYOURSKILL BOOLEAN */
     if (isSuccess && data) {
       const jobs = data?.jobs;
+
       const jobObj = jobs.find((job) => job.id == id);
 
       const foundSkill = yourSkills.find(
@@ -37,7 +38,7 @@ const JobDetails = () => {
       setJob(jobObj);
       setIsYourSkill(foundSkill);
     }
-  }, [id, data]);
+  }, [id, data.jobs]);
 
   return (
     <JobDetailsUI job={job} fetchState={fetchState} isYourSkill={isYourSkill} />
