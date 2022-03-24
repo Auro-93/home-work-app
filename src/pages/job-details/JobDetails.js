@@ -26,9 +26,9 @@ const JobDetails = () => {
 
   useEffect(() => {
     /*SET JOB DATA AND ISYOURSKILL BOOLEAN */
+    console.log(data);
     if (isSuccess && data) {
-      const jobs = data?.jobs;
-
+      const jobs = data.jobs;
       if (jobs) {
         const jobObj = jobs.find((job) => job.id == id);
 
@@ -40,7 +40,7 @@ const JobDetails = () => {
         setIsYourSkill(foundSkill);
       }
     }
-  }, [id, data.jobs]);
+  }, [id, data]);
 
   return (
     <JobDetailsUI job={job} fetchState={fetchState} isYourSkill={isYourSkill} />
