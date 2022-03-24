@@ -29,14 +29,16 @@ const JobDetails = () => {
     if (isSuccess && data) {
       const jobs = data?.jobs;
 
-      const jobObj = jobs.find((job) => job.id == id);
+      if (jobs) {
+        const jobObj = jobs.find((job) => job.id == id);
 
-      const foundSkill = yourSkills.find(
-        (skill) => skill.name === jobObj.category
-      );
+        const foundSkill = yourSkills.find(
+          (skill) => skill.name === jobObj.category
+        );
 
-      setJob(jobObj);
-      setIsYourSkill(foundSkill);
+        setJob(jobObj);
+        setIsYourSkill(foundSkill);
+      }
     }
   }, [id, data.jobs]);
 
