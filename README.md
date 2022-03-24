@@ -1,44 +1,147 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<p align="center">
 
-## Available Scripts
+  <p align="center">
+    <a href="https://github.com/Auro-93/home-work-app">
+        <img src="src/assets/images/logo.png" alt="Logo">
+    </a>
+   </p>
+  
+  <h3 align="center">HomeWork App</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    An app to search for remote jobs, save offers in your favorites and find jobs that match your skills, built with React, Redux-Toolkit and Sass.
+  </p>
 
-### `npm start`
+  <br>
+  <br>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <h3 align="center">Preview</h3>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <a href="https://github.com/Auro-93/home-work-app">
+    <img src="src/assets/screenshots/home.jpg" alt="home-screenshot">
+  </a>
 
-### `npm test`
+  <a href="https://github.com/Auro-93/home-work-app">
+    <img src="src/assets/screenshots/search-jobs.jpg" alt="search-jobs-screenshot">
+  </a>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <a href="https://github.com/Auro-93/home-work-app">
+    <img src="src/assets/screenshots/favourites.jpg" alt="favourites-screenshot">
+  </a>
 
-### `npm run build`
+   <a href="https://github.com/Auro-93/home-work-app">
+    <img src="src/assets/screenshots/skills.jpg" alt="skills-screenshot">
+  </a>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   <a href="https://github.com/Auro-93/home-work-app">
+    <img src="src/assets/screenshots/about.jpg" alt="about-screenshot">
+  </a>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#links-contacts">Links & Contacts</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-### `npm run eject`
+## About The Project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is a React app that fetches remote job offers from the [Remotive API](https://github.com/remotive-io/remote-jobs-api) public API.
+User can explore five main routes:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<ul>
+<li>the <strong>Home</strong>, which contains a description and summary of the website; </li>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<li>the <strong>Search Jobs</strong> section which allows users to search remote job offers, depending on the search form queries (search term and job category). This section is paginated; </li>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<li>the <strong>Skills</strong> section, which allows users to save their skills in the local storage. Job categories that match user skills are marked with the icon ✅. This makes it easier to find jobs that match your profile;</li>
 
-## Learn More
+<li><strong>Your List</strong> section, which allows users to save their favourite job offers in the local storage;</li>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<li><strong>About</strong> section, which contains data such as links to the source code, the API and tech stack used and credits. </li>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+</ul>
+
+### Built With
+
+- [React](https://it.reactjs.org/)
+- [Redux Toolkit and RTK Query](https://redux-toolkit.js.org/)
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage?retiredLocale=it)
+- [CSS modules (written in Sass)](https://github.com/css-modules/css-modules)
+- [react-js-pagination](https://www.npmjs.com/package/react-js-pagination)
+- [react-responsive](https://www.npmjs.com/package/react-responsive)
+- [react-animation-on-scroll](https://www.npmjs.com/package/react-animation-on-scroll)
+- [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax)
+- [react-toastify](https://www.npmjs.com/package/react-toastify)
+
+## Getting Started
+
+### Prerequisites
+
+Running the application requires [Node](https://nodejs.org/en/) to be installed on your operating system.
+
+You can then install the latest version of npm from your terminal with the command:
+
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Clone the repository locally with the git command:
+
+   ```sh
+   git clone https://github.com/Auro-93/home-work-app.git
+   ```
+
+2. Install NPM packages:
+
+   ```sh
+   npm install
+   ```
+
+3. Run the app with command:
+
+   ```sh
+   npm start
+   ```
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Links & Contacts
+
+[@Aurora Sirigu](https://www.linkedin.com/in/aurora-sirigu-a001301b4/) - 93a.sirigu at gmail dot com
+
+Project Repository: [home-work-app](https://github.com/Auro-93/home-work-app)
+
+Project Website: [home-work-app - Netlify](https://home-work-app.netlify.app/)
+
+Portfolio: [aurodev-web-developer-portfolio](https://aurodev-web-developer-portfolio.netlify.app/)
+
+## Acknowledgements
+
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [Remotive API](https://github.com/remotive-io/remote-jobs-api)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
+- [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax)
