@@ -1,0 +1,95 @@
+@import "../../utilities";
+
+.home_section {
+  position: relative;
+  padding: 4rem 2rem;
+  font-size: 0.8rem;
+  @include display-flex(column, center, normal);
+
+  @include md {
+    padding: 4rem;
+    font-size: 1rem;
+  }
+
+  @include lg {
+    @include display-flex(row, center, center);
+    height: 100vh;
+    padding: 4rem 10rem;
+  }
+
+  &_desc_container {
+    margin: 1rem 0;
+
+    @include lg {
+      flex: 0.5;
+      margin: 0;
+    }
+
+    &_title {
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    &_paragraph {
+      line-height: 1.5rem;
+    }
+
+    &_link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      letter-spacing: 0.15rem;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      &:hover {
+        filter: brightness(80%);
+      }
+
+      &:active {
+        filter: brightness(120%);
+      }
+    }
+  }
+
+  &_img_container {
+    @include display-flex(row, normal, center);
+
+    @include lg {
+      flex: 0.5;
+    }
+
+    img {
+      position: relative;
+      @include img-shape(80%, auto, 20px);
+      margin: 0 auto;
+      padding: 2rem;
+
+      @include xxs {
+        width: 70%;
+      }
+
+      @include xs {
+        width: 50%;
+      }
+
+      @include s {
+        width: 40%;
+      }
+
+      @include md {
+        width: 30%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      @include lg {
+        width: 60%;
+        height: auto;
+        padding: 3rem;
+        margin: 0;
+      }
+    }
+  }
+}

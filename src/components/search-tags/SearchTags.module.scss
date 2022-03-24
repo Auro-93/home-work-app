@@ -1,0 +1,26 @@
+@import "../../utilities";
+
+.search_tags {
+  @include display-flex(row, normal, center);
+  margin: 3rem 2rem 0;
+  color: $light-grey;
+  font-size: 0.8rem;
+
+  @include md {
+    font-size: 1rem;
+  }
+
+  div {
+    padding: 1rem;
+  }
+
+  &_category_tag {
+    background-color: $dark-green;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &_keyword_tag {
+    background-color: $dark-red;
+    border-radius: 0 10px 10px 0;
+  }
+}

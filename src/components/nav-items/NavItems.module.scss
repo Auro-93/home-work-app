@@ -1,0 +1,78 @@
+@import "../../utilities";
+
+.nav_items {
+  font-weight: 300;
+
+  .nav_item {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    .link {
+      display: block;
+      padding: 0.6rem;
+      border: 1px solid transparent;
+      transition: border 0.3s linear;
+    }
+
+    .your_list_item {
+      position: relative;
+      .fav_jobs_num {
+        @include display-flex(row, center, center, false, inline-flex);
+        @include img-shape(1.5rem, 1.5rem, 100%);
+        background-color: $grey_4;
+        color: $light-grey;
+        font-weight: 500;
+        font-size: 0.8rem;
+        padding: 0.4rem;
+      }
+    }
+  }
+
+  &_desktop {
+    font-size: 0.75rem;
+    @include display-flex(row, normal, center);
+
+    .link {
+      color: $secondary;
+
+      &:hover,
+      &:active {
+        border: 1px solid $secondary;
+      }
+    }
+
+    .your_list_item {
+      .fav_jobs_num {
+        @include abs-position(0, auto, auto, auto);
+      }
+    }
+  }
+
+  &_mobile {
+    font-size: 1rem;
+    @include display-flex(column, center, normal, center);
+
+    .nav_item {
+      width: 100%;
+
+      .link {
+        display: block;
+        color: $primary;
+        padding: 2rem 0;
+        transition: all 0.3s linear;
+        &:hover,
+        &:active {
+          background-color: $primary;
+          color: $secondary;
+        }
+      }
+
+      .your_list_item {
+        .fav_jobs_num {
+          @include abs-position(0.5rem, auto, auto, auto);
+        }
+      }
+    }
+  }
+}

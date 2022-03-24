@@ -1,0 +1,29 @@
+@import "../../utilities";
+
+.not_found_page {
+  @include display-flex(row, center, center);
+  min-height: 100vh;
+  background-color: $primary;
+
+  &_container {
+    @include display-flex(column, center, center, center);
+    @include light-container();
+    padding: 4rem;
+    width: 90%;
+
+    @include md {
+      width: 60%;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    img {
+      @include img-shape(3rem, 3rem);
+      background-color: $primary;
+    }
+  }
+}

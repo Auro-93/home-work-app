@@ -1,0 +1,103 @@
+@import "../../utilities";
+
+.search_form_container {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 20rem;
+  @include bg-img(
+    "../../assets/images/search-bg.jpg",
+    cover,
+    center center,
+    no-repeat
+  );
+  filter: grayscale(90%);
+
+  .search_form_layer {
+    @include abs-position(0, auto, auto, 0, 100%, 100%);
+    @include display-flex(row, center, center);
+    background-color: $transparent-black;
+
+    form {
+      @include display-flex(row, normal, center);
+
+      .search {
+        position: relative;
+        padding: 0.6rem;
+        width: 10rem;
+
+        background-color: $white;
+
+        border: 1px solid $grey_7;
+
+        filter: brightness(80%);
+        color: $white;
+        background: transparent url("../../assets//images/search-icon.svg")
+          no-repeat 95% center;
+
+        transition: all 0.3s linear;
+
+        @include md {
+          width: 15rem;
+        }
+
+        @include lg {
+          width: 20rem;
+        }
+
+        &:focus {
+          filter: brightness(100%);
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        &::placeholder {
+          color: $grey_8;
+          font-size: 0.7rem;
+
+          @include md {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .select {
+        width: 8rem;
+        font-size: 0.7rem;
+
+        @include md {
+          font-size: 1rem;
+        }
+
+        @include lg {
+          width: 15rem;
+        }
+
+        * {
+          border-radius: 4px 0 0 4px;
+        }
+
+        option {
+          padding: 0.6rem;
+        }
+      }
+
+      .btn_submit {
+        padding: 0.625rem;
+        cursor: pointer;
+        background-color: $light-grey;
+        border: 1px solid $grey_7;
+        border-radius: 0 4px 4px 0;
+        transition: background-color 0.3s linear;
+
+        &:hover {
+          filter: brightness(80%);
+        }
+
+        &:active {
+          background-color: $black_2;
+          color: $light-grey;
+          border: transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "../../utilities";
+
+.about_page {
+  background-color: $primary;
+  min-height: 100vh;
+
+  &_header {
+    @include display-flex(column, center, center);
+    background-color: $grey_4;
+    height: 20rem;
+
+    &_title {
+      font-family: $font-decorative;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $secondary;
+
+      @include md {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &_main {
+    @include light-container();
+    padding: 2rem 1rem;
+    width: 100%;
+    color: $grey_5;
+
+    margin: 3rem auto;
+
+    @include s {
+      padding: 2rem;
+      width: 90%;
+    }
+
+    @include md {
+      padding: 3rem;
+      width: 80%;
+    }
+
+    @include lg {
+      padding: 4rem;
+      width: 60%;
+    }
+
+    h4 {
+      color: $black_2;
+      margin: 2.5rem 0 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    p {
+      line-height: 1.8rem;
+      font-size: 0.9rem;
+
+      @include md {
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: $primary;
+      margin: 0 0.3rem;
+    }
+
+    &_tech_stack_group {
+      @include display-flex(row, normal, center);
+      margin-top: 1rem;
+
+      a {
+        display: block;
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+
+        img {
+          @include img-shape(2rem, 2rem);
+        }
+      }
+    }
+  }
+}

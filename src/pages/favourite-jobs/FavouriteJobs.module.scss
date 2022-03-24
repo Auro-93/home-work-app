@@ -1,0 +1,57 @@
+@import "../../utilities";
+
+.fav_jobs_page {
+  background-color: $primary;
+  min-height: 100vh;
+
+  &_header {
+    @include display-flex(column, center, center);
+    background-color: $grey_4;
+    height: 20rem;
+
+    &_title {
+      font-family: $font-decorative;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $secondary;
+
+      @include md {
+        font-size: 2rem;
+      }
+    }
+    &_count {
+      @include display-flex(row, normal, center);
+      margin-top: 2rem;
+      color: $light-grey;
+      font-size: 1rem;
+
+      @include md {
+        font-size: 1.2rem;
+      }
+
+      span {
+        @include display-flex(row, center, center);
+        @include img-shape(2rem, 2rem, 100%);
+        background-color: $primary;
+        padding: 0.5rem;
+        margin-right: 0.4rem;
+      }
+    }
+  }
+
+  &_grid {
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem 0;
+
+    @include md {
+      width: 90%;
+      padding: 2rem;
+    }
+
+    @include lg {
+      width: 60%;
+      padding: 3rem;
+    }
+  }
+}

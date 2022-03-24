@@ -1,0 +1,18 @@
+@import "../../utilities";
+
+.details_button {
+  @include btn-style($bright-blue, $white, 500, 0.9rem);
+
+  &_small {
+    padding: 0.5rem;
+    flex: 0.5;
+    font-size: 0.6rem;
+    @include s {
+      font-size: 1rem;
+    }
+  }
+
+  &_large {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,174 @@
+/*FONT-FAMILY VARIABLES*/
+$font-standard: "Fredoka", sans-serif;
+$font-decorative: "Permanent Marker", cursive;
+
+/*COLOR VARIABLES*/
+$primary: #222;
+$secondary: #fff0e8f8;
+$black: black;
+$white: white;
+$grey: grey;
+$white_2: #ffffffec;
+$black_2: #111;
+$black_3: #181818;
+$black_4: #1b1b1b;
+$transparent-black: rgba(0, 0, 0, 0.4);
+$grey_2: #222;
+$grey_3: #424242;
+$grey_4: #444;
+$grey_5: #777;
+$grey_6: #faf1ed8a;
+$grey_7: #ccc;
+$light-grey: #d3d3d3;
+$grey_8: #dedede;
+$aliceblue: #f5faff;
+$dark-green: #0b110a;
+$dark-red: #1d0f0b;
+$dark-blue: #07031b;
+$bright-green: #00f396d0;
+$bright-blue: #007ef3;
+$bright-red: #d6332ed0;
+
+/*BUTTON STYLE MIXIN*/
+@mixin btn-style($bg, $color, $fontWeight, $fontSize: false) {
+  @if $fontSize {
+    font-size: $fontSize;
+  }
+  background-color: $bg;
+  color: $color;
+  font-weight: $fontWeight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+
+  &:active {
+    filter: saturate(2);
+  }
+}
+
+/*ABSOLUTE POSITION MIXIN*/
+@mixin abs-position(
+  $top,
+  $right,
+  $bottom,
+  $left,
+  $width: false,
+  $height: false,
+  $centered: false
+) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  content: "";
+
+  @if $width {
+    width: $width;
+  }
+
+  @if $height {
+    height: $height;
+  }
+
+  @if $centered {
+    transform: translate(-$left, -$top);
+  }
+}
+
+/*DISPLAY-FLEX MIXIN*/
+@mixin display-flex(
+  $direction,
+  $justifyContent,
+  $alignItems,
+  $textAlign: false,
+  $flex: flex
+) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+
+  @if $textAlign {
+    text-align: $textAlign;
+  }
+}
+
+/*LIGHT CONTAINER STYLE MIXIN*/
+@mixin light-container() {
+  background-color: $secondary;
+  border-radius: 20px;
+}
+
+/*IMAGE SHAPE AND SIZE MIXIN*/
+@mixin img-shape($width, $height, $rounded: false) {
+  width: $width;
+  height: $height;
+
+  @if $rounded {
+    border-radius: $rounded;
+  }
+}
+
+/*BACKGROUND IMAGE MIXIN*/
+@mixin bg-img($url, $size, $position, $repeat: no-repeat) {
+  background-image: url($url);
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+/*MEDIA QUERIES MIXINS*/
+
+@mixin xxs {
+  @media screen and (min-width: 300px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin xs-max {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}

@@ -1,0 +1,88 @@
+@import "./utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  @include md {
+    font-size: 16px;
+  }
+}
+
+html,
+body,
+#root {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $black;
+}
+
+.app {
+  max-width: 1600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  font-family: $font-standard;
+  background-color: $primary;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+  box-shadow: none;
+}
+
+.notification {
+  font-size: 0.7rem;
+  line-height: 1.4rem;
+  margin: 3rem 0;
+  position: relative;
+  z-index: 9999;
+}
+
+/* CUSTOM SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $grey;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary;
+  border-radius: 20px;
+}
+
+//For Firefox
+
+html {
+  scrollbar-color: $secondary $light-grey; /* thumb and track color */
+  scrollbar-width: thin;
+}

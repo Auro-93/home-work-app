@@ -1,0 +1,10 @@
+@import "../../utilities";
+
+.footer {
+  width: 100%;
+  padding: 2rem 0;
+  @include display-flex(row, center, center, center);
+
+  background-color: $transparent-black;
+  color: $grey_5;
+}

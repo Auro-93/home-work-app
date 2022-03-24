@@ -1,0 +1,26 @@
+@import "../../utilities";
+
+.remove_button {
+  @include btn-style($bright-red, $white, 700);
+
+  span {
+    margin-left: 0.4rem;
+    font-size: 0.6rem;
+  }
+
+  &_small {
+    padding: 0.5rem;
+    flex: 0.5;
+
+    font-size: 0.6rem;
+    @include s {
+      font-size: 1rem;
+    }
+  }
+
+  &_large {
+    padding: 1rem;
+    flex: 0.5;
+    font-size: 1rem;
+  }
+}

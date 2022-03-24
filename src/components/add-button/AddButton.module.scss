@@ -1,0 +1,20 @@
+@import "../../utilities";
+
+.add_button {
+  @include btn-style($bright-green, $white, 700);
+
+  &_small {
+    padding: 0.5rem;
+    flex: 0.5;
+    font-size: 0.6rem;
+    @include s {
+      font-size: 1rem;
+    }
+  }
+
+  &_large {
+    padding: 1rem;
+    flex: 0.5;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../utilities";
+
+.skill_card {
+  @include display-flex(row, space-between, center);
+  width: 100%;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+
+  &_title {
+    color: $black_2;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../utilities";
+
+.hero {
+  height: 60vh;
+  position: relative;
+
+  @include xs {
+    height: 70vh;
+  }
+
+  @include s {
+    height: 80vh;
+  }
+
+  @include md {
+    height: 100vh;
+  }
+
+  &:after {
+    @include abs-position(0, auto, auto, 0, 100%, 100%);
+    background-color: $transparent-black;
+  }
+
+  &_image {
+    @include abs-position(0, auto, auto, 0, 100%, 100%);
+    object-fit: cover;
+  }
+
+  &_background {
+    filter: blur(0.3rem) grayscale(60%);
+  }
+
+  &_title {
+    @include abs-position(80%, auto, auto, 0, 100%, false, true);
+    text-align: center;
+    font-family: $font-decorative;
+    font-size: 1rem;
+    color: $white;
+    opacity: 0.8;
+
+    @include s {
+      font-size: 1.5rem;
+    }
+
+    @include md {
+      font-size: 2rem;
+    }
+
+    @include lg {
+      font-size: 2.5rem;
+    }
+
+    span {
+      color: $secondary;
+    }
+  }
+}

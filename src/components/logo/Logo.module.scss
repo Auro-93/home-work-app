@@ -1,0 +1,8 @@
+@import "../../utilities";
+
+.logo {
+  @include img-shape(5rem, auto);
+  @include s {
+    @include img-shape(7rem, auto);
+  }
+}

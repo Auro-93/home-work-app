@@ -1,0 +1,33 @@
+@import "../../utilities";
+
+.sidebar {
+  @include display-flex(column, center, normal);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background-color: transparent;
+  animation: open-menu 0.3s linear normal both;
+
+  .ham_icon_container {
+    @include display-flex(row, center, center);
+    @include abs-position(0, 0, auto, auto);
+    @include img-shape(3rem, 3rem);
+    background-color: $black_2;
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    background-color: $secondary;
+    opacity: 0;
+    @include img-shape(0, 0);
+  }
+
+  100% {
+    background-color: $secondary;
+    opacity: 1;
+    @include img-shape(100%, 100%);
+  }
+}

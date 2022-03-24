@@ -1,0 +1,21 @@
+@import "../../utilities";
+
+.navbar {
+  @include display-flex(row, space-between, center);
+  max-width: 1600px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  padding: 0 2rem;
+
+  &_initial {
+    background-color: $transparent-black;
+  }
+
+  &_scroll {
+    background-color: $black_2;
+  }
+}

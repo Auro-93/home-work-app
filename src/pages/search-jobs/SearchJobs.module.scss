@@ -1,0 +1,32 @@
+@import "../../utilities";
+
+.search_jobs_page {
+  background-color: $primary;
+  min-height: 100vh;
+
+  .success_container {
+    position: relative;
+
+    .jobs_grid {
+      padding: 3rem 1rem;
+
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+
+      @include xs {
+        padding: 3rem 4rem;
+      }
+
+      @include s {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem 1rem;
+      }
+
+      @include lg {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3rem 2rem;
+      }
+    }
+  }
+}

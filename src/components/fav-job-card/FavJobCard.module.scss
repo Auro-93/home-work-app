@@ -1,0 +1,52 @@
+@import "../../utilities";
+
+.animated_div {
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+.fav_job_card {
+  @include display-flex(row, normal, center);
+  @include light-container();
+  width: 100%;
+
+  &_logo {
+    @include img-shape(2rem, 2rem, 100%);
+    background-color: $white;
+    margin-left: 1rem;
+
+    @include s {
+      @include img-shape(4rem, auto, 100%);
+    }
+  }
+
+  &_info {
+    margin-left: 1rem;
+
+    &_title {
+      color: $black_2;
+      font-size: 0.9rem;
+      order: 1;
+
+      @include s {
+        font-size: 1.2rem;
+        order: 2;
+      }
+    }
+
+    &_company {
+      margin-top: 0.4rem;
+      font-size: 0.7rem;
+
+      @include s {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &_btn_group {
+    margin-left: auto;
+    width: 25%;
+  }
+}

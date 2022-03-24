@@ -1,0 +1,146 @@
+@import "../../utilities";
+
+.job_details_page {
+  @include display-flex(row, center, center);
+  min-height: 100vh;
+  background-color: $primary;
+  padding: 10rem 0 4rem;
+
+  .job_details_container {
+    background-color: $white_2;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: $secondary 0px 2px 8px 0px;
+
+    @include md {
+      width: 90%;
+    }
+
+    .details_1 {
+      @include display-flex(column, normal, normal);
+
+      @include md {
+        @include display-flex(row, space-between, normal);
+      }
+
+      .company_logo {
+        @include display-flex(row, center, center);
+        padding: 2rem;
+        width: 40%;
+        margin: 0 auto;
+
+        @include md {
+          padding: 4rem;
+        }
+
+        img {
+          @include img-shape(5rem, 5rem, 100%);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          background-color: $white;
+
+          @include md {
+            @include img-shape(8rem, 8rem, 100%);
+          }
+        }
+      }
+
+      .job_info {
+        width: 100%;
+        @include display-flex(column, center, center, center);
+
+        background-color: $grey_6;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 4rem;
+        position: relative;
+
+        @include md {
+          width: 60%;
+          @include display-flex(column, normal, normal, left);
+        }
+
+        p,
+        .company,
+        .category {
+          margin: 1rem 0;
+        }
+
+        .category {
+          @include display-flex(row, normal, center);
+          font-size: 0.7rem;
+
+          @include s {
+            font-size: 0.8rem;
+          }
+
+          @include md {
+            font-size: 0.9rem;
+          }
+
+          div:first-child {
+            @include display-flex(row, normal, center);
+            box-shadow: $black_2 0px 1px 2px;
+            padding: 0.3rem 1rem;
+            margin-left: 0.5rem;
+            border-radius: 20px;
+          }
+        }
+
+        .job_pub_date {
+          margin-bottom: 3rem;
+        }
+
+        .btn_group {
+          @include display-flex(row, normal, normal);
+          @include abs-position(auto, auto, 0, 0, 100%);
+
+          .btn_external_link {
+            @include display-flex(row, center, center);
+            background-color: $secondary;
+            padding: 1rem;
+            flex: 0.5;
+            font-weight: 500;
+            transition: all 0.3s linear;
+
+            &:hover {
+              filter: brightness(90%);
+            }
+
+            &:active {
+              filter: saturate(2);
+            }
+          }
+        }
+      }
+    }
+
+    .details_2 {
+      padding: 4rem 1.5rem;
+      background-color: $aliceblue;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      @include md {
+        padding: 4rem;
+      }
+
+      .job_desc {
+        ul {
+          list-style-type: circle;
+        }
+
+        p,
+        div {
+          margin: 1rem 0 !important;
+        }
+        img {
+          display: none;
+        }
+
+        * {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+}
