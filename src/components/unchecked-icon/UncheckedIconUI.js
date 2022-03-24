@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./UncheckedIcon.module.scss";
 import uncheckedIcon from "../../assets/images/unchecked-icon.png";
 
 const UncheckedIconUI = ({ addingSkill, isTabletOrMobile }) => {
@@ -10,6 +11,7 @@ const UncheckedIconUI = ({ addingSkill, isTabletOrMobile }) => {
   };
   return (
     <img
+      className={styles.unchecked_icon}
       style={iconStyle}
       onClick={addingSkill}
       src={uncheckedIcon}
