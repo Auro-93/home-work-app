@@ -26,11 +26,11 @@
 
     &_title {
       color: $black_2;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       order: 1;
 
       @include s {
-        font-size: 1.2rem;
+        font-size: 1rem;
         order: 2;
       }
     }
@@ -47,6 +47,5 @@
 
   &_btn_group {
     margin-left: auto;
-    width: 25%;
   }
 }
