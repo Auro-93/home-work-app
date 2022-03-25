@@ -45,14 +45,6 @@ const GlobalWrapper = ({ children }) => {
     window.scrollTo({ top: favGridCoords, behavior: "smooth" });
   }, [favCurrentPage]);
 
-  /*HIDE SCROLLBARS WHEN MOBILE MENU IS OPEN*/
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.documentElement.style.overflowY = "hidden";
-    } else {
-      document.documentElement.style.overflowY = "auto";
-    }
-  }, [mobileMenuOpen]);
   return children;
 };
 
