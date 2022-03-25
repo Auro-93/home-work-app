@@ -18,7 +18,7 @@ const PaginationUI = ({
         activePage={currentPage}
         itemsCountPerPage={jobsPerPage}
         totalItemsCount={jobsList.length}
-        pageRangeDisplayed={isTabletOrMobile ? 5 : 10}
+        pageRangeDisplayed={isTabletOrMobile ? 3 : 10}
         onChange={handlePageChange}
       />
     </div>
