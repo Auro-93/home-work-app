@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const GlobalWrapper = ({ children }) => {
@@ -23,11 +23,6 @@ const GlobalWrapper = ({ children }) => {
   /* FAVOURITE JOBS VIEW CURRENT PAGE */
   const favCurrentPage = useSelector(
     (state) => state.pagination.favJobs.currentPage
-  );
-
-  /* MOBILE MENU STATE */
-  const mobileMenuOpen = useSelector(
-    (state) => state.mobileMenu.mobileMenuOpen
   );
 
   /*SCROLL TO THE WINDOW TOP WHEN ROUTE IS CHANGED*/

@@ -15,16 +15,24 @@
 
   .search_form_layer {
     @include abs-position(0, auto, auto, 0, 100%, 100%);
-    @include display-flex(row, center, center);
+    @include display-flex(column, center, normal);
     background-color: $transparent-black;
 
+    @include s {
+      @include display-flex(row, center, center);
+    }
+
     form {
-      @include display-flex(row, normal, center);
+      @include display-flex(column, center, center);
+
+      @include s {
+        @include display-flex(row, normal, center);
+      }
 
       .search {
         position: relative;
         padding: 0.6rem;
-        width: 10rem;
+        width: 90%;
 
         background-color: $white;
 
@@ -36,6 +44,10 @@
           no-repeat 95% center;
 
         transition: all 0.3s linear;
+
+        @include s {
+          width: 10rem;
+        }
 
         @include md {
           width: 15rem;
@@ -60,8 +72,12 @@
       }
 
       .select {
-        width: 8rem;
+        width: 90%;
         font-size: 0.7rem;
+
+        @include s {
+          width: 8rem;
+        }
 
         @include md {
           font-size: 1rem;

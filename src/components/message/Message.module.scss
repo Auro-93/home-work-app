@@ -1,7 +1,6 @@
 @import "../../utilities";
 
 .msg_container {
-  padding: 10rem 0;
   &_msg {
     @include display-flex(row, center, center, center);
     padding: 1rem;

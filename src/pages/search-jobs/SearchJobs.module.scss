@@ -8,24 +8,32 @@
     position: relative;
 
     .jobs_grid {
-      padding: 3rem 1rem;
+      padding: 3rem 0;
 
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 2rem;
 
       @include xs {
-        padding: 3rem 4rem;
+        padding: 3rem;
       }
 
       @include s {
+        padding: 3rem 8rem;
+      }
+
+      @include md {
         grid-template-columns: repeat(2, 1fr);
-        padding: 3rem 1rem;
+        padding: 3rem 0;
+        gap: 1rem;
       }
 
       @include lg {
         grid-template-columns: repeat(3, 1fr);
         padding: 3rem 2rem;
+      }
+      @include xl {
+        gap: 2rem;
       }
     }
   }
