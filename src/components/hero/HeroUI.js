@@ -30,28 +30,22 @@ const HeroUI = ({ isTabletOrMobile }) => {
           src={bgImg}
           alt="cafe-image"
         />
-        <AnimationOnScroll
-          animateOnce={true}
-          delay={100}
-          offset={700}
-          animateIn="animate__fadeIn"
-        >
-          <img
-            ref={parallaxGirl.ref}
-            src={girlImg}
-            className={styles.hero_image}
-            alt="remote-working-girl-image"
-          />
-          <img
-            ref={parallaxPc.ref}
-            src={foregroundImg}
-            className={styles.hero_image}
-            alt="computer-image"
-          />
-          <h1 className={styles.hero_title}>
-            Open the door to a new <span>career</span>
-          </h1>
-        </AnimationOnScroll>
+
+        <img
+          ref={parallaxGirl.ref}
+          src={girlImg}
+          className={styles.hero_image}
+          alt="remote-working-girl-image"
+        />
+        <img
+          ref={parallaxPc.ref}
+          src={foregroundImg}
+          className={styles.hero_image}
+          alt="computer-image"
+        />
+        <h1 className={styles.hero_title}>
+          Open the door to a new <span>career</span>
+        </h1>
       </section>
     </AnimationOnScroll>
   );
