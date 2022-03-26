@@ -3,13 +3,18 @@
 .navbar {
   @include display-flex(row, space-between, center);
   max-width: 1600px;
+  min-height: 3.5rem;
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   z-index: 1000;
-  padding: 0 2rem;
+  padding: 0 1rem;
+
+  @include s {
+    padding: 0 2rem;
+  }
 
   &_initial {
     background-color: $transparent-black;

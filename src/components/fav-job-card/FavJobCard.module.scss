@@ -14,10 +14,11 @@
   &_logo {
     @include img-shape(2rem, 2rem, 100%);
     background-color: $white;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 
     @include s {
       @include img-shape(4rem, auto, 100%);
+      margin-left: 1rem;
     }
   }
 

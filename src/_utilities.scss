@@ -29,6 +29,55 @@ $bright-green: #00f396d0;
 $bright-blue: #007ef3;
 $bright-red: #d6332ed0;
 
+/*MEDIA QUERIES MIXINS*/
+
+@mixin xxs {
+  @media screen and (min-width: 300px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin xs-max {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
 /*BUTTON STYLE MIXIN*/
 @mixin btn-style($bg, $color, $fontWeight, $fontSize: false) {
   @if $fontSize {
@@ -103,7 +152,10 @@ $bright-red: #d6332ed0;
 /*LIGHT CONTAINER STYLE MIXIN*/
 @mixin light-container() {
   background-color: $secondary;
-  border-radius: 20px;
+
+  @include md {
+    border-radius: 16px;
+  }
 }
 
 /*IMAGE SHAPE AND SIZE MIXIN*/
@@ -122,53 +174,4 @@ $bright-red: #d6332ed0;
   background-size: $size;
   background-position: $position;
   background-repeat: $repeat;
-}
-
-/*MEDIA QUERIES MIXINS*/
-
-@mixin xxs {
-  @media screen and (min-width: 300px) {
-    @content;
-  }
-}
-
-@mixin xs {
-  @media screen and (min-width: 400px) {
-    @content;
-  }
-}
-
-@mixin xs-max {
-  @media screen and (max-width: 400px) {
-    @content;
-  }
-}
-
-@mixin s {
-  @media screen and (min-width: 576px) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin lg {
-  @media screen and (min-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media screen and (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin xxl {
-  @media screen and (min-width: 1400px) {
-    @content;
-  }
 }

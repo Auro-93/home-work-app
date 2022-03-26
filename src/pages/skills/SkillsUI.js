@@ -19,8 +19,9 @@ const SkillsUI = ({ fetchState }) => {
           />
         </h1>
         <div className={styles.skills_page_header_desc}>
-          <p>Job offers that match your skills will be marked with the icon</p>
-          <CheckedIcon isInSkillsGrid={false} />
+          <p>
+            Job offers that match your skills will be marked with the icon ✅
+          </p>
         </div>
       </header>
 

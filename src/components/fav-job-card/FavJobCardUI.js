@@ -8,13 +8,13 @@ const FavJobCardUI = ({ job, isInFavourites, isTabletOrMobile }) => {
   /*DYNAMIC BUTTONS STYLES*/
 
   const favBtnStyle = {
-    borderRadius: "0 0 16px 0",
+    borderRadius: isTabletOrMobile ? 0 : "0 0 16px 0",
     padding: isTabletOrMobile ? "1rem 0.5rem" : "1rem 0.8rem",
     width: "100%",
   };
 
   const viewBtnStyle = {
-    borderRadius: "0 16px 0 0",
+    borderRadius: isTabletOrMobile ? 0 : "0 16px 0 0",
     padding: isTabletOrMobile ? "1rem 0.5rem" : "0.8rem",
     width: "100%",
   };

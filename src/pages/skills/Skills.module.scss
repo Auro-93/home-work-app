@@ -33,7 +33,6 @@
       font-size: 0.7rem;
 
       p {
-        margin-bottom: 0.4rem;
         padding: 0 0.5rem;
         line-height: 1rem;
       }
@@ -42,7 +41,6 @@
         @include display-flex(row, normal, center, false);
         font-size: 1rem;
         p {
-          margin-bottom: 0;
           padding: 0;
         }
       }

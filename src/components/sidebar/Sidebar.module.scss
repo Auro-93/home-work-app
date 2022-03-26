@@ -13,7 +13,7 @@
   .ham_icon_container {
     @include display-flex(row, center, center);
     @include abs-position(0, 0, auto, auto);
-    @include img-shape(3rem, 3rem);
+    padding: 0.5rem;
     background-color: $black_2;
   }
 }

@@ -4,16 +4,17 @@
   @include display-flex(row, center, center);
   min-height: 100vh;
   background-color: $primary;
-  padding: 10rem 0 4rem;
+  padding: 6rem 0;
 
   .job_details_container {
     background-color: $white_2;
-    border-radius: 10px;
+
     width: 100%;
     box-shadow: $secondary 0px 2px 8px 0px;
 
     @include md {
       width: 90%;
+      border-radius: 10px;
     }
 
     .details_1 {
