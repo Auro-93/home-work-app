@@ -52,12 +52,13 @@
         background-color: $grey_6;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
-        padding: 4rem;
+        padding: 2rem;
         position: relative;
 
         @include md {
           width: 60%;
           @include display-flex(column, normal, normal, left);
+          padding: 4rem;
         }
 
         p,
