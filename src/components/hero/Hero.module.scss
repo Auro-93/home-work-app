@@ -38,11 +38,11 @@
     color: $white;
     opacity: 0.8;
 
-    @include s {
+    @include xs {
       font-size: 1.5rem;
     }
 
-    @include md {
+    @include s {
       font-size: 2rem;
     }
 
