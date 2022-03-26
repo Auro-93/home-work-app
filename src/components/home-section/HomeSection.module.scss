@@ -3,7 +3,7 @@
 .home_section {
   position: relative;
   padding: 4rem 2rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   @include display-flex(column, center, normal);
 
   @include md {
