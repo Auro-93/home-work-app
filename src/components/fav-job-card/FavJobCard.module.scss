@@ -27,7 +27,7 @@
 
     &_title {
       color: $black_2;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       order: 1;
 
       @include s {
@@ -38,7 +38,7 @@
 
     &_company {
       margin-top: 0.4rem;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
 
       @include s {
         font-size: 1rem;
