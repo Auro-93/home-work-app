@@ -28,13 +28,13 @@
 
     &_desc {
       @include display-flex(column, center, center, center);
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       color: $light-grey;
       font-size: 0.7rem;
 
       p {
         margin-bottom: 0.4rem;
-        padding: 0 0.5rem;
+        padding: 0.6rem;
         line-height: 1.2rem;
       }
 
@@ -43,7 +43,6 @@
         font-size: 1rem;
         p {
           margin-bottom: 0;
-          padding: 0;
         }
       }
     }
