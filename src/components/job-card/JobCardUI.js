@@ -24,7 +24,7 @@ const JobCardUI = ({ job, isInFavourites, isYourSkill }) => {
   return (
     <AnimationOnScroll
       animateOnce={true}
-      offset={700}
+      offset={500}
       animateIn="animate__fadeIn"
     >
       <div className={styles.job_card}>
